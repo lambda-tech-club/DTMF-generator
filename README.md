@@ -34,7 +34,7 @@ Audio(data, rate=SAMPLING_RATE, autoplay=True)
 # メッセージを入力（半角カタカナと半角英数、一部記号のみに対応）
 MESSAGE: str = "ﾃｷｽﾄﾒﾂｾｰｼﾞ"
 # メッセージ番号に変換
-message_numbers = (CODE_TABLE[m] for m in normalized_message if m in CODE_TABLE)
+message_numbers = (CODE_TABLE[m] for m in MESSAGE if m in CODE_TABLE)
 # 仕様に合わせて先頭と末尾に番号追加
 dial_number = "*2*2" + "".join(message_numbers) + "##"
 # DTMF信号に変換
